@@ -54,6 +54,7 @@ class SportsListFragment : Fragment() {
             sportsViewModel.updateCurrentSport(it)
             // Navigate to the details screen
             slidingPane.openPane()
+            slidingPane.lockMode = SlidingPaneLayout.LOCK_MODE_LOCKED
         }
         binding.recyclerView.adapter = adapter
         adapter.submitList(sportsViewModel.sportsData)
